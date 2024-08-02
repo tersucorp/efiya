@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('stores', function (Blueprint $table) {
+        Schema::create('businesses', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->string('business_name');
@@ -41,7 +41,8 @@ return new class extends Migration
             $table->boolean('is_featured')->default(false);
             $table->integer('ratings_count')->default(0);
             $table->decimal('average_rating', 3, 2)->default(0.00);
-            $table->string('logo_url')->nullable();
+            $table->text('avatar')->nullable();
+            $table->text('banner')->nullable();
         });
     }
 
@@ -50,6 +51,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('stores');
+        Schema::dropIfExists('business');
     }
 };

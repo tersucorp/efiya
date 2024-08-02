@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Models\Store;
+use App\Models\Business;
 
 Route::get('/', function () {
     return view('home');
@@ -15,12 +15,13 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-Route::get('/marketplace/store/{storeId}', function ($storeId){
-    return view('store', ['store' => Store::find($storeId)]);
+Route::get('/marketplace/business/{businessId}', function ($businessId){
+    dd(Business::find($businessId));
+    return view('business', ['business' => Business::find($businessId)]);
 });
 
 Route::get('/marketplace', function (){
-    return view('marketplace', ['stores' => Store::all()]);
+    return view('marketplace', ['businesses' => Business::all()]);
 });
 
 Route::get('/services', function(){
