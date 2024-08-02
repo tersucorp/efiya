@@ -8,6 +8,7 @@
     <title>Home</title>
 </head>
 <body>
+    <x-main-nav />
     {{ $slot }}
 </body>
 </html>
