@@ -1,0 +1,153 @@
+[
+  {
+    "id": 1,
+    "firstname": "David",
+    "lastname": "Smith",
+    "gender": "Male",
+    "skills": ["Electrical Repairs", "Plumbing", "Painting", "Drywall Installation"],
+    "description": "Experienced handyman with a broad skill set covering electrical repairs, plumbing, painting, and drywall installation.",
+    "rating": 4.5,
+    "experience_years": 7,
+    "availability": "Available immediately",
+    "profile_picture_url": "https://img.freepik.com/free-photo/young-african-american-builder-man-wearing-construction-uniform-safety-helmet-holding-paint-roller-brush-smiling-cheerfully-standing-pink_141793-18994.jpg?t=st=1722601581~exp=1722602181~hmac=8ffabe172211d440ad65270e10c0c2e34bba060abd422e99d91504bde2c9fa30"
+  },
+  {
+    "id": 2,
+    "firstname": "Emily",
+    "lastname": "Johnson",
+    "gender": "Female",
+    "skills": ["Furniture Assembly", "Appliance Repair", "Home Maintenance", "Gardening"],
+    "description": "Versatile handywoman skilled in furniture assembly, appliance repair, home maintenance tasks, and gardening.",
+    "rating": 4.7,
+    "experience_years": 5,
+    "availability": "Available starting next week",
+    "profile_picture_url": "https://www.shutterstock.com/image-photo/young-african-american-handywoman-yellow-260nw-2136575025.jpg"
+  },
+  {
+    "id": 3,
+    "firstname": "Michael",
+    "lastname": "Williams",
+    "gender": "Male",
+    "skills": ["Carpet Installation", "Tile Work", "Woodworking", "Home Renovation Projects"],
+    "description": "Handyman with expertise in carpet installation, tile work, woodworking, and managing various home renovation projects.",
+    "rating": 4.9,
+    "experience_years": 10,
+    "availability": "Available immediately",
+    "profile_picture_url": "https://img.freepik.com/free-photo/young-african-american-builder-man-wearing-construction-uniform-safety-helmet-holding-paint-roller-brush-smiling-cheerfully-standing-pink_141793-18994.jpg?t=st=1722601581~exp=1722602181~hmac=8ffabe172211d440ad65270e10c0c2e34bba060abd422e99d91504bde2c9fa30"
+  },
+  {
+    "id": 4,
+    "firstname": "Jessica",
+    "lastname": "Brown",
+    "gender": "Female",
+    "skills": ["Window Replacement", "Roof Repairs", "Deck Construction", "Outdoor Carpentry"],
+    "description": "Professionally trained handywoman with experience in window replacement, roof repairs, deck construction, and outdoor carpentry.",
+    "rating": 4.8,
+    "experience_years": 8,
+    "availability": "Available starting next month",
+    "profile_picture_url": "https://www.shutterstock.com/image-photo/young-african-american-handywoman-yellow-260nw-2136575025.jpg"
+  },
+  {
+    "id": 5,
+    "firstname": "Robert",
+    "lastname": "Jones",
+    "gender": "Male",
+    "skills": ["Heating & Cooling Systems", "Water Heater Installation", "Septic System Maintenance", "Drain Cleaning"],
+    "description": "Licensed handyman specializing in heating & cooling systems, water heater installations, septic system maintenance, and drain cleaning.",
+    "rating": 4.6,
+    "experience_years": 15,
+    "availability": "Available immediately",
+    "profile_picture_url": "https://img.freepik.com/free-photo/young-african-american-builder-man-wearing-construction-uniform-safety-helmet-holding-paint-roller-brush-smiling-cheerfully-standing-pink_141793-18994.jpg?t=st=1722601581~exp=1722602181~hmac=8ffabe172211d440ad65270e10c0c2e34bba060abd422e99d91504bde2c9fa30"
+  },
+  {
+    "id": 6,
+    "firstname": "Jennifer",
+    "lastname": "Davis",
+    "gender": "Female",
+    "skills": ["Kitchen Remodeling", "Bathroom Renovation", "Flooring Installation", "Wall Painting"],
+    "description": "Experienced handywoman with a focus on kitchen remodeling, bathroom renovation, flooring installation, and wall painting.",
+    "rating": 4.4,
+    "experience_years": 12,
+    "availability": "Available starting next week",
+    "profile_picture_url": "https://www.shutterstock.com/image-photo/young-african-american-handywoman-yellow-260nw-2136575025.jpg"
+  },
+  {
+    "id": 7,
+    "firstname": "Daniel",
+    "lastname": "Clark",
+    "gender": "Male",
+    "skills": ["Plumbing", "Painting", "Flooring Installation", "Drywall Repair"],
+    "description": "Experienced handyman with skills in plumbing, painting, flooring installation, and drywall repair.",
+    "rating": 4.2,
+    "experience_years": 6,
+    "availability": "Available immediately",
+    "profile_picture_url": "https://img.freepik.com/free-photo/young-african-american-builder-man-wearing-construction-uniform-safety-helmet-holding-paint-roller-brush-smiling-cheerfully-standing-pink_141793-18994.jpg?t=st=1722601581~exp=1722602181~hmac=8ffabe172211d440ad65270e10c0c2e34bba060abd422e99d91504bde2c9fa30"
+  },
+  {
+    "id": 8,
+    "firstname": "Sarah",
+    "lastname": "Martinez",
+    "gender": "Female",
+    "skills": ["Furniture Assembly", "Home Cleaning", "Gardening", "Pet Care"],
+    "description": "Handywoman with experience in furniture assembly, home cleaning, gardening, and pet care.",
+    "rating": 4.6,
+    "experience_years": 4,
+    "availability": "Available starting next week",
+    "profile_picture_url": "https://www.shutterstock.com/image-photo/young-african-american-handywoman-yellow-260nw-2136575025.jpg",
+    "store_link": "https://example.com/sarah-martinez"
+  },
+  {
+    "id": 9,
+    "firstname": "James",
+    "lastname": "Lewis",
+    "gender": "Male",
+    "skills": ["Electrical Wiring", "Lighting Installation", "Generator Maintenance", "Circuit Breaker Replacement"],
+    "description": "Certified electrician with skills in electrical wiring, lighting installation, generator maintenance, and circuit breaker replacement.",
+    "rating": 4.7,
+    "experience_years": 9,
+    "availability": "Available immediately",
+    "profile_picture_url": "https://img.freepik.com/free-photo/young-african-american-builder-man-wearing-construction-uniform-safety-helmet-holding-paint-roller-brush-smiling-cheerfully-standing-pink_141793-18994.jpg?t=st=1722601581~exp=1722602181~hmac=8ffabe172211d440ad65270e10c0c2e34bba060abd422e99d91504bde2c9fa30",
+    "store_link": "https://example.com/james-lewis"
+  },
+  {
+    "id": 10,
+    "firstname": "Elizabeth",
+    "lastname": "Harris",
+    "gender": "Female",
+    "skills": ["Painting", "Flooring", "Wall Repairs", "Ceiling Repairs"],
+    "description": "Handywoman with expertise in painting, flooring, wall repairs, and ceiling repairs.",
+    "rating": 4.3,
+    "experience_years": 8,
+    "availability": "Available starting next week",
+    "profile_picture_url": "https://www.shutterstock.com/image-photo/young-african-american-handywoman-yellow-260nw-2136575025.jpg",
+    "store_link": "https://example.com/elizabeth-harris"
+  },
+  {
+    "id": 11,
+    "firstname": "John",
+    "lastname": "Young",
+    "gender": "Male",
+    "skills": ["Carpentry", "Roofing", "Masonry", "Deck Building"],
+    "description": "Experienced handyman with skills in carpentry, roofing, masonry, and deck building.",
+    "rating": 4.8,
+    "experience_years": 12,
+    "availability": "Available immediately",
+    "profile_picture_url": "https://img.freepik.com/free-photo/young-african-american-builder-man-wearing-construction-uniform-safety-helmet-holding-paint-roller-brush-smiling-cheerfully-standing-pink_141793-18994.jpg?t=st=1722601581~exp=1722602181~hmac=8ffabe172211d440ad65270e10c0c2e34bba060abd
+
+422e99d91504bde2c9fa30",
+    "store_link": "https://example.com/john-young"
+  },
+  {
+    "id": 12,
+    "firstname": "Megan",
+    "lastname": "Walker",
+    "gender": "Female",
+    "skills": ["Interior Painting", "Furniture Restoration", "Home Organization", "Light Fixture Installation"],
+    "description": "Handywoman specializing in interior painting, furniture restoration, home organization, and light fixture installation.",
+    "rating": 4.9,
+    "experience_years": 7,
+    "availability": "Available starting next month",
+    "profile_picture_url": "https://www.shutterstock.com/image-photo/young-african-american-handywoman-yellow-260nw-2136575025.jpg",
+    "store_link": "https://example.com/megan-walker"
+  }
+]
