@@ -16,7 +16,6 @@ Route::get('/contact', function () {
 });
 
 Route::get('/marketplace/business/{businessId}', function ($businessId){
-    dd(Business::find($businessId));
     return view('business', ['business' => Business::find($businessId)]);
 });
 
