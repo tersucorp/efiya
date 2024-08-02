@@ -21,3 +21,7 @@ Route::get('/marketplace', function () {
 Route::get('/services', function(){
     return view('services');
 });
+
+Route::get('/signup', function(){
+    return view('signup');
+});

@@ -1,5 +1,5 @@
 <nav class='bg-black text-white w-full px-4 py-4'>
-    <div class="max-w-7xl mx-auto flex justify-between items-center">
+    <div class="max-w-[80vw] mx-auto flex justify-between items-center">
         <!-- Logo and Text (Left) -->
         <div class="flex items-center">
             <img class="w-12 h-12" src="https://cdn-icons-png.flaticon.com/512/8948/8948758.png" alt="Efiya Icon">
@@ -15,10 +15,10 @@
 
         <!-- Desktop Navigation (Center, hidden on mobile) -->
         <ul class="hidden md:flex items-center space-x-6">
-            <li><a class="{{ request()->is('/') ? 'text-[#FDC936]':'hover:text-gray-500'}}" href='/'>Home</a></li>
-            <li><a class="{{ request()->is('/marketplace') ? 'text-[#FDC936]':'hover:text-gray-500'}}" href='/marketplace'>Marketplace</a></li>
-            <li><a class="{{ request()->is('/services') ? 'text-[#FDC936]':'hover:text-gray-500'}}" href='/services'>Services</a></li>
-            <li><a class="{{ request()->is('/about') ? 'text-[#FDC936]':'hover:text-gray-500'}}" href='/about'>About</a></li>
+            <li><x-navlink href='/' :active="request()->is('/')">Home</x-navlink></li>
+            <li><x-navlink href='/marketplace' :active="request()->is('marketplace')">Marketplace</x-navlink></li>
+            <li><x-navlink href='/services' :active="request()->is('services')">Services</x-navlink></li>
+            <li><x-navlink href='/about' :active="request()->is('about')">About</x-navlink></li>
         </ul>
 
         <!-- Desktop Buttons (Right, hidden on mobile) -->
@@ -42,12 +42,12 @@
             </button>
         </div>
         <ul class="flex flex-col items-center justify-center h-full space-y-8 text-2xl">
-            <li><a href='/' class="{{ request()->is('/') ? 'text-[#FDC936]':'hover:text-gray-500'}}">Home</a></li>
-            <li><a href='/marketplace' class="{{ request()->is('/marketplace') ? 'text-[#FDC936]':'hover:text-gray-500'}}">Marketplace</a></li>
-            <li><a href='/services' class="{{ request()->is('/services') ? 'text-[#FDC936]':'hover:text-gray-500'}}">Services</a></li>
-            <li><a href='/about' class="{{ request()->is('/about') ? 'text-[#FDC936]':'hover:text-gray-500'}}">About</a></li>
-            <li><a href="/signin" class="border-2 hover:bg-white hover:text-black py-2 px-4 rounded-full">Signin</a></li>
-            <li><a href="/signup" class="hover:text-[#FDC936]">Join us &#10230;</a></li>
+            <li><x-navlink href='/' :active="request()->is('/')">Home</x-navlink></li>
+            <li><x-navlink href='/marketplace' :active="request()->is('marketplace')">Marketplace</x-navlink></li>
+            <li><x-navlink href='/services' :active="request()->is('services')">Services</x-navlink></li>
+            <li><x-navlink href='/about' :active="request()->is('about')">About</x-navlink></li>
+            <li><x-navlink href="/signin" class="border-2 hover:bg-white hover:text-black py-2 px-4 rounded-full">Signin</x-navlink></li>
+            <li><x-navlink href="/signup" class="hover:text-[#FDC936]">Join us &#10230;</x-navlink></li>
         </ul>
     </div>
 </nav>
