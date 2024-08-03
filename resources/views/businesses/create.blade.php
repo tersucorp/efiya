@@ -59,6 +59,11 @@
                 <x-input-field id="banner" label="Banner" type="file" nullable />
             </div>
 
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <x-avatar-field id="avatar" label="Avatar" />
+                <x-banner-field id="banner" label="Banner" />
+            </div>
+
             <button type="submit" class="w-full bg-[#FDC936] text-[#000] px-6 py-3 rounded-full hover:bg-[#e0b22f] transition duration-300">Register Business</button>
         </form>
     </div>
