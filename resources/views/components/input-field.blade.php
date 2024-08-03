@@ -13,6 +13,11 @@
     <label
         for="{{ $id }}"
         class="absolute left-3 -top-2.5 text-white px-1 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-5 peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-white">
-        {{ $label }}{{ $required ? "<span class='text-red-700'>*</span>" : ($nullable ? ' (optional)' : '') }}
+        {{ $label }}
+        @if($required)
+            <span class="text-red-700">*</span>
+        @elseif($nullable)
+            (optional)
+        @endif
     </label>
 </div>
