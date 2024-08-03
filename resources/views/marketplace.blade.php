@@ -11,4 +11,5 @@
             />
         @endforeach
     </div>
+    <div class="text-white max-w-[80vw] mx-auto py-8"> {{ $businesses->links() }} </div>
 </x-layout>

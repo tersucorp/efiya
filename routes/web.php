@@ -20,7 +20,8 @@ Route::get('/marketplace/business/{businessId}', function ($businessId){
 });
 
 Route::get('/marketplace', function (){
-    return view('marketplace', ['businesses' => Business::all()]);
+    $businesses = Business::paginate(10);
+    return view('marketplace', ['businesses' => $businesses]);
 });
 
 Route::get('/services', function(){
