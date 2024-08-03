@@ -15,13 +15,17 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-Route::get('/marketplace/business/{businessId}', function ($businessId){
-    return view('business', ['business' => Business::find($businessId)]);
+Route::get('/businesses', function (){
+    $businesses = Business::paginate(10);
+    return view('businesses.index', ['businesses' => $businesses]);
 });
 
-Route::get('/marketplace', function (){
-    $businesses = Business::paginate(10);
-    return view('marketplace', ['businesses' => $businesses]);
+Route::get('/businesses/create', function (){
+    return view('businesses.create');
+});
+
+Route::get('/businesses/{businessId}', function ($businessId){
+    return view('businesses.show', ['business' => Business::find($businessId)]);
 });
 
 Route::get('/services', function(){

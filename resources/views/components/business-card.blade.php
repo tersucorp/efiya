@@ -37,7 +37,7 @@
 
         <div class="flex items-center justify-between">
             <img src="{{ $avatar }}" alt="Avatar" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full">
-            <a href="/marketplace/business/{{ $businessId }}" class="text-sm sm:text-base text-yellow-400 hover:text-yellow-600 transition-colors duration-200">
+            <a href="/businesses/{{ $businessId }}" class="text-sm sm:text-base text-yellow-400 hover:text-yellow-600 transition-colors duration-200">
                 check me out &#10230;
             </a>
         </div>
