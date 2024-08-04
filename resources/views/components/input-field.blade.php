@@ -20,4 +20,7 @@
             (optional)
         @endif
     </label>
+   @error($id)
+    <p class="text-xs text-red-500 font-semibold">{{ $message }}</p>
+@enderror
 </div>

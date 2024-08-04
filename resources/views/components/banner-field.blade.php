@@ -22,4 +22,7 @@
             <p class="text-xs leading-5 text-gray-300">PNG, JPG, GIF up to 5MB</p>
         </div>
     </div>
+   @error($id)
+    <p class="text-xs text-red-500 font-semibold">{{ $message }}</p>
+@enderror
 </div>

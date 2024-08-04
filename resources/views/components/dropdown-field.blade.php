@@ -18,4 +18,7 @@
         class="absolute left-3 -top-2.5 text-white px-1 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-5 peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-white">
         {{ $label }}{{ $required ? '*' : ($nullable ? ' (optional)' : '') }}
     </label>
+   @error($id)
+    <p class="text-xs text-red-500 font-semibold">{{ $message }}</p>
+@enderror
 </div>
