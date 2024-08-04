@@ -22,6 +22,6 @@
         </button>
     </form>
    @error($id)
-    <p class="text-xs text-red-500 font-semibold">{{ $message }}</p>
+    <p class="text-xs text-red-500 font-semibold m-1">{{ $message }}</p>
 @enderror
 </header>
