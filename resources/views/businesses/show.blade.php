@@ -1,4 +1,5 @@
 <x-layout>
+    <x-businesses-nav />
     <h1>Store</h1>
     <div class="bg-gray-100 min-h-screen">
         <!-- Banner with overlay -->

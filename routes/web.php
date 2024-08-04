@@ -17,7 +17,7 @@ Route::get('/contact', function () {
 });
 
 Route::get('/businesses', function () {
-    $businesses = Business::paginate(10);
+    $businesses = Business::latest()->paginate(10);
     return view('businesses.index', ['businesses' => $businesses]);
 });
 

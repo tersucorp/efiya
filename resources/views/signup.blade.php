@@ -1,4 +1,5 @@
 <x-layout>
+    <x-main-nav />
     <div class="flex max-w-[80vw] mx-auto">
         <!-- Left Column (Form) -->
         <div class="w-full h-full lg:w-1/2 xl:pr-36 md:py-16 text-white">

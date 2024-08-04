@@ -19,6 +19,7 @@
             <li><x-navlink href='/businesses' :active="request()->is('businesses')">Marketplace</x-navlink></li>
             <li><x-navlink href='/services' :active="request()->is('services')">Services</x-navlink></li>
             <li><x-navlink href='/about' :active="request()->is('about')">About</x-navlink></li>
+            <li><x-navlink href='/blog' :active="request()->is('blog')">Blog</x-navlink></li>
         </ul>
 
         <!-- Desktop Buttons (Right, hidden on mobile) -->
@@ -48,6 +49,7 @@
             <li><x-navlink href='/about' :active="request()->is('about')">About</x-navlink></li>
             <li><x-navlink href="/signin" class="border-2 hover:bg-white hover:text-black py-2 px-4 rounded-full">Signin</x-navlink></li>
             <li><x-navlink href="/signup" class="hover:text-[#FDC936]">Join us &#10230;</x-navlink></li>
+            <li><x-navlink href='/blog' :active="request()->is('blog')">Blog</x-navlink></li>
         </ul>
     </div>
 </nav>
