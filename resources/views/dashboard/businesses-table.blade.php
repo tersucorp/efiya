@@ -1,4 +1,4 @@
-<div class="bg-customDark-200 shadow overflow-hidden sm:rounded-lg">
+<div class="bg-customDark-200 shadow overflow-x-scroll sm:rounded-lg min-h-[70vh]">
     <div class="px-4 py-5 sm:px-6">
         <div class="flex flex-col space-y-4">
             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-4">
@@ -40,8 +40,8 @@
             </div>
         </div>
     </div>
-    <div class="overflow-x-auto">
-        <table class="min-w-full divide-y divide-customDark-100">
+    <div class="min-h-full">
+        <table class="min-w-full min-h-full divide-y divide-customDark-100">
             <thead class="bg-customDark-200">
                 <tr>
                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-200 uppercase tracking-wider">
@@ -81,6 +81,7 @@
         </table>
     </div>
 </div>
+<div class="text-white max-w-[80vw] mx-auto py-8"> {{ $businesses->links() }} </div>
 
 <script>
     const button = document.getElementById('display-fields-menu-button');

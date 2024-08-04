@@ -1,4 +1,4 @@
-<aside class="w-full min-w-[12%] md:w-64 bg-customDark-300 text-white">
+<aside class="fixed top-0 left-0 h-full w-64 bg-customDark-300 text-white overflow-y-auto">
     <x-logo />
     <ul>
         <li>
