@@ -3,10 +3,7 @@
     <div id="mobile-menu" class="fixed inset-0 bg-black text-white p-4 hidden md:hidden">
         <!-- Close Button -->
         <div class="flex justify-between items-center mb-4">
-            <div class="flex items-center">
-                <img class="w-12 h-12" src="https://cdn-icons-png.flaticon.com/512/8948/8948758.png" alt="Efiya Icon">
-                <a href="/" class="text-xl ml-2 font-bold">Efiya</a>
-            </div>
+            <x-logo />
             <button id="close-menu-button">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -54,10 +51,7 @@
     <section class='bg-black text-white w-full px-4 py-4'>
         <div class="max-w-[80vw] mx-auto flex justify-between items-center">
             <!-- Logo and Text (Left) -->
-            <div class="flex items-center">
-                <img class="w-12 h-12" src="https://cdn-icons-png.flaticon.com/512/8948/8948758.png" alt="Efiya Icon">
-                <a href="/" class="text-xl ml-2 font-bold">Efiya</a>
-            </div>
+            <x-logo />
 
             <!-- Mobile Menu Button (Right on mobile, hidden on desktop) -->
             <button id="mobile-menu-button" class="md:hidden">
@@ -79,6 +73,7 @@
             <div class="hidden md:flex items-center space-x-4">
                 <a href="/signin" class="border-2 hover:bg-white hover:text-black py-2 px-4 rounded-full">Signin</a>
                 <a href="/signup" class="hover:text-[#FDC936]">Join us &#10230;</a>
+                <a href="/users/dashboard" class="hover:text-[#FDC936]">Dashboard</a>
             </div>
         </div>
     </section>

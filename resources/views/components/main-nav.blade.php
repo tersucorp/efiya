@@ -1,10 +1,7 @@
 <nav class='bg-black text-white w-full px-4 py-4'>
     <div class="max-w-[80vw] mx-auto flex justify-between items-center">
         <!-- Logo and Text (Left) -->
-        <div class="flex items-center">
-            <img class="w-12 h-12" src="https://cdn-icons-png.flaticon.com/512/8948/8948758.png" alt="Efiya Icon">
-            <a href="/" class="text-xl ml-2 font-bold">Efiya</a>
-        </div>
+        <x-logo />
 
         <!-- Mobile Menu Button (Right on mobile, hidden on desktop) -->
         <button id="mobile-menu-button" class="md:hidden">
@@ -26,6 +23,7 @@
         <div class="hidden md:flex items-center space-x-4">
             <a href="/signin" class="border-2 hover:bg-white hover:text-black py-2 px-4 rounded-full">Signin</a>
             <a href="/signup" class="hover:text-[#FDC936]">Join us &#10230;</a>
+            <a href="/users/dashboard" class="hover:text-[#FDC936]">Dashboard</a>
         </div>
     </div>
 

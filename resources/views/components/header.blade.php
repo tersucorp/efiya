@@ -9,6 +9,8 @@
         <input
             type="text"
             placeholder="Search for a professional. Example: Plumber"
+            name='search-services'
+            id='search-services'
             class="w-full bg-transparent focus:outline-none text-black px-4 py-3 mb-2 sm:mb-0 rounded-xl sm:rounded-l-full"
         />
         <button
@@ -21,7 +23,4 @@
             </svg>
         </button>
     </form>
-   @error($id)
-    <p class="text-xs text-red-500 font-semibold m-1">{{ $message }}</p>
-@enderror
 </header>

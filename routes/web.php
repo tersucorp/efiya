@@ -83,3 +83,14 @@ Route::get('/services', function () {
 Route::get('/signup', function () {
     return view('signup');
 });
+
+
+// Users
+Route::get('/users/dashboard', function(){
+    return view('users.dashboard.index');
+});
+
+Route::get('/users/dashboard/businesses', function(){
+    $businesses = Business::latest()->paginate(20);
+    return view('users.dashboard.show-businesses', ['businesses' => $businesses]);
+});
