@@ -30,7 +30,7 @@
             </thead>
             <tbody class="bg-customDark-200 divide-y divide-customDark-100">
                 @foreach ($businesses as $business)
-                    <x-business-row :business="$business" />
+                    <x-table-row :business="$business" />
                 @endforeach
             </tbody>
         </table>

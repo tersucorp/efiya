@@ -1,4 +1,4 @@
-@props(['id', 'label', 'placeholder' => '', 'required' => false, 'nullable' => false])
+@props(['id', 'label', 'value' => '', 'placeholder' => '', 'required' => false, 'nullable' => false])
 
 <div class="relative flex-grow">
     <textarea
@@ -9,7 +9,9 @@
         {{ $required ? 'required' : '' }}
         style="padding-top: 1.5rem; padding-bottom: 0.5rem; line-height: 1.5rem;"
         rows="4"
-    ></textarea>
+    >
+    {{ $value }}
+</textarea>
     <label
         for="{{ $id }}"
         class="absolute left-3 -top-2.5 text-white px-1 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-5 peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-white">

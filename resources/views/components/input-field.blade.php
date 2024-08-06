@@ -1,4 +1,4 @@
-@props(['type' => 'text', 'id', 'label', 'placeholder' => '', 'required' => false, 'nullable' => false])
+@props(['type' => 'text', 'id', 'value' => '', 'label', 'placeholder' => '', 'required' => false, 'nullable' => false])
 
 <div class="relative flex-grow">
     <input
@@ -9,6 +9,7 @@
         placeholder="{{ $placeholder }}"
         {{ $required ? 'required' : '' }}
         style="padding-top: 1.125rem; padding-bottom: 1.125rem; line-height: 1.5rem;"
+        value="{{ $value }}"
     />
     <label
         for="{{ $id }}"

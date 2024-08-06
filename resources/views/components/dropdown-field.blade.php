@@ -1,4 +1,4 @@
-@props(['id', 'label', 'options', 'required' => false, 'nullable' => false])
+@props(['id', 'label', 'options', 'required' => false, 'nullable' => false, 'value' => null])
 
 <div class="relative flex-grow">
     <select
@@ -9,8 +9,8 @@
         style="padding-top: 1.125rem; padding-bottom: 1.125rem; line-height: 1.5rem;"
     >
         <option value="">Select {{ $label }}</option>
-        @foreach ($options as $value => $text)
-            <option value="{{ $value }}">{{ $text }}</option>
+        @foreach ($options as $optionValue => $text)
+            <option value="{{ $optionValue }}" {{ strtolower($value) == strtolower($optionValue) ? 'selected' : '' }}>{{ $text }}</option>
         @endforeach
     </select>
     <label

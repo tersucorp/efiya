@@ -10,6 +10,10 @@ class Business extends Model
     use HasFactory;
 
     protected $guarded = [];
+    // protected $casts = [
+    //     'opening_hours' => 'datetime:H:i',
+    //     'closing_hours' => 'datetime:H:i',
+    // ];
 
     public function user()
     {
