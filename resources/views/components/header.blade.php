@@ -1,6 +1,6 @@
 <header class='text-white text-center max-w-8xl mx-auto px-4 py-8 sm:py-12 md:py-16'>
     <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-9xl font-extrabold mb-4 sm:mb-6">
-        Expert Services<br class="hidden sm:inline" />at your beck and call
+        <span class="text-yellow-500">Expert Services</span><br class="hidden sm:inline" />at your beck and call
     </h1>
     <p class="text-base sm:text-xl my-12 sm:mb-20 max-w-3xl mx-auto px-4">
         Our mission is to help you find professional service providers and to help them provide you the best of solutions.

@@ -1,10 +1,15 @@
-<aside class="fixed top-0 left-0 h-full w-64 bg-customDark-300 text-white overflow-y-auto">
+<aside class="bg-customDark-300 w-64 flex-shrink-0 h-full hidden md:flex md:flex-col fixed text-gray-100 p-4">
     <x-logo />
-    <ul>
-        <li>
-            <x-navlink href="/users/dashboard/businesses">
-                show businesses
-            </x-navlink>
-        </li>
-    </ul>
+    <div class="flex-grow p-4 overflow-y-auto">
+        <!-- Sidebar content here -->
+        <nav>
+            <ul>
+                <li>
+                    <x-navlink href="/users/dashboard/businesses">
+                        show businesses
+                    </x-navlink>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </aside>
