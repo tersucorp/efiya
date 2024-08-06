@@ -25,17 +25,15 @@ Route::get('/businesses/create', function () {
     return view('businesses.create');
 });
 
-Route::get('/businesses/{businessId}', function ($businessId) {
-    return view('businesses.show', ['business' => Business::find($businessId)]);
+Route::get('/businesses/{business}', function (Business $business) {
+    return view('businesses.show', ['business' => $business]);
 });
 
-Route::get('/businesses/{businessId}/edit', function ($businessId) {
-    return view('businesses.edit', ['business' => Business::find($businessId)]);
+Route::get('/businesses/{business}/edit', function (Business $business) {
+    return view('businesses.edit', ['business' => $business]);
 });
 
-Route::patch('/businesses/{businessId}', function ($businessId, Request $request) {
-    $business = Business::findOrFail($businessId);
-    $data = $request->all();
+Route::patch('/businesses/{business}', function (Business $business, Request $request) {
     $request->validate([
         'business_name' => ['required', 'string', 'max:255'],
         'business_type' => ['required', 'string', 'max:255'],
@@ -76,9 +74,9 @@ Route::patch('/businesses/{businessId}', function ($businessId, Request $request
 });
 
 
-Route::delete('/businesses/{businessId}', function ($businessId) {
-    Business::findOrFail($businessId)->delete();
-    return redirect('/businesses');
+Route::delete('/businesses/{business}', function (Business $business) {
+    $business->delete();
+    return redirect('/users/dashboard/businesses');
 });
 
 
