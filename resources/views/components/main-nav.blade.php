@@ -21,9 +21,14 @@
 
         <!-- Desktop Buttons (Right, hidden on mobile) -->
         <div class="hidden md:flex items-center space-x-4">
-            <a href="/signin" class="border-2 hover:bg-white hover:text-black py-2 px-4 rounded-full">Signin</a>
-            <a href="/signup" class="hover:text-[#FDC936]">Join us &#10230;</a>
-            <a href="/users/dashboard" class="hover:text-[#FDC936]">Dashboard</a>
+            @guest
+                <a href="/login" class="border-2 hover:bg-white hover:text-black py-2 px-4 rounded-full">login</a>
+                <a href="/register" class="hover:text-[#FDC936]">Join us &#10230;</a>
+            @endguest
+            @auth
+                <a href="/users/dashboard" class="hover:text-[#FDC936]">Dashboard</a>
+                <x-logout>Log out</x-logout>
+            @endauth
         </div>
     </div>
 
@@ -45,9 +50,16 @@
             <li><x-navlink href='/businesses' :active="request()->is('businesses')">Marketplace</x-navlink></li>
             <li><x-navlink href='/services' :active="request()->is('services')">Services</x-navlink></li>
             <li><x-navlink href='/about' :active="request()->is('about')">About</x-navlink></li>
-            <li><x-navlink href="/signin" class="border-2 hover:bg-white hover:text-black py-2 px-4 rounded-full">Signin</x-navlink></li>
-            <li><x-navlink href="/signup" class="hover:text-[#FDC936]">Join us &#10230;</x-navlink></li>
             <li><x-navlink href='/blog' :active="request()->is('blog')">Blog</x-navlink></li>
+            @guest
+                <li><x-navlink href="/login" class="border-2 hover:bg-white hover:text-black py-2 px-4 rounded-full">login</x-navlink></li>
+                <li><x-navlink href="/register" class="hover:text-[#FDC936]">Join us &#10230;</x-navlink></li>
+            @endguest
+            @auth
+                <a href="/users/dashboard" class="hover:text-[#FDC936]">Dashboard</a>
+                <x-logout>Log out</x-logout>
+            @endauth
+
         </ul>
     </div>
 </nav>

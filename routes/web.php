@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\BusinessController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Business;
@@ -9,7 +11,6 @@ Route::view('/', 'home');
 Route::view('/about', 'about');
 Route::view('/contact', 'contact');
 Route::view('/services', 'services');
-Route::view('/signup', 'signup');
 
 Route::controller(BusinessController::class)->group(function () {
     Route::get('/businesses', 'index');
@@ -28,3 +29,9 @@ Route::get('/users/dashboard/businesses', function () {
     $businesses = Business::latest()->paginate(20);
     return view('users.dashboard.show-businesses', ['businesses' => $businesses]);
 });
+
+Route::get('/register', [RegisteredUserController::class, 'create']);
+Route::post('/register', [RegisteredUserController::class, 'store']);
+Route::get('/login', [AuthenticatedSessionController::class, 'create']);
+Route::post('/login', [AuthenticatedSessionController::class, 'store']);
+Route::post('/logout', [AuthenticatedSessionController::class, 'destroy']);

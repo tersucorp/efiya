@@ -1,10 +1,10 @@
-@props(['type' => 'text', 'id', 'value' => '', 'label', 'placeholder' => '', 'required' => false, 'nullable' => false])
+@props(['type' => 'text', 'id', 'name', 'value' => '', 'label', 'placeholder' => '', 'required' => false, 'nullable' => false])
 
 <div class="relative flex-grow">
     <input
         type="{{ $type }}"
         id="{{ $id }}"
-        name="{{ $id }}"
+        name="{{ $name ?? $id }}"
         class="peer w-full bg-zinc-900 border border-zinc-800 rounded-md px-5 py-4 text-white outline-0 focus:outline-0 focus:ring-2 focus:ring-zinc-950 focus:border-transparent"
         placeholder="{{ $placeholder }}"
         {{ $required ? 'required' : '' }}
@@ -21,7 +21,13 @@
             (optional)
         @endif
     </label>
-   @error($id)
-    <p class="text-xs text-red-500 font-semibold m-1">{{ $message }}</p>
-@enderror
+    @if ($errors->any())
+    <div class="mb-4">
+        <ul class="list-disc list-inside text-sm text-red-600">
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 </div>

@@ -41,10 +41,13 @@
         </div>
 
         <!-- Signup and Login Buttons -->
+        @auth
         <div class="mt-auto">
-            <a href="/signin" class="block w-full text-center bg-white text-black py-2 rounded mb-2">Login</a>
-            <a href="/signup" class="block w-full text-center bg-black border-2 border-white text-white py-2 rounded">Signup</a>
+            <a href="/login" class="block w-full text-center bg-white text-black py-2 rounded mb-2">Login</a>
+            <a href="/register" class="block w-full text-center bg-black border-2 border-white text-white py-2 rounded">Signup</a>
         </div>
+        @endauth
+
     </div>
 
     <!-- Top level nav (replacing the original first row) -->
@@ -71,9 +74,14 @@
 
             <!-- Desktop Buttons (Right, hidden on mobile) -->
             <div class="hidden md:flex items-center space-x-4">
-                <a href="/signin" class="border-2 hover:bg-white hover:text-black py-2 px-4 rounded-full">Signin</a>
-                <a href="/signup" class="hover:text-[#FDC936]">Join us &#10230;</a>
-                <a href="/users/dashboard" class="hover:text-[#FDC936]">Dashboard</a>
+                @guest
+                    <a href="/login" class="border-2 hover:bg-white hover:text-black py-2 px-4 rounded-full">login</a>
+                    <a href="/register" class="hover:text-[#FDC936]">Join us &#10230;</a>
+                @endguest
+                @auth
+                    <a href="/users/dashboard" class="hover:text-[#FDC936]">Dashboard</a>
+                    <x-logout>Log out</x-logout>
+                @endauth
             </div>
         </div>
     </section>

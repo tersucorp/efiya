@@ -3,24 +3,16 @@
     <div class="flex max-w-[80vw] mx-auto">
         <!-- Left Column (Form) -->
         <div class="w-full h-full lg:w-1/2 xl:pr-36 md:py-16 text-white">
-            <h2 class="text-3xl font-bold mb-8">Sign Up</h2>
-            <p class="mb-6">Have an account? <a href="/signin" class="underline">Login</a></p>
+            <h2 class="text-3xl font-bold mb-8">Login</h2>
+            <p class="mb-6">Don't have an account? <a href="/register" class="underline">Login</a></p>
 
-            <form class="space-y-8">
-                <div class="flex flex-col md:flex-row md:space-x-4 space-y-8 md:space-y-0">
-                    <x-input-field type="text" id="firstname" placeholder="" label="First Name" />
-                    <x-input-field type="text" id="lastname" placeholder="" label="Last Name" />
-                </div>
+            <form method="POST" action="/login" class="space-y-8">
+                @csrf
 
-                <x-input-field id="email" type="email" placeholder="" label="Email address" />
-                <x-input-field id="phone" type="tel" placeholder="" label="Phone number" />
+                <x-input-field id="email" name="email" type="email" placeholder="" label="Email address" required/>
+                <x-input-field id="password" name="password" type="password" placeholder="" label="Password" required/>
 
-                <div class="flex flex-col md:flex-row md:space-x-4 space-y-8 md:space-y-0">
-                    <x-input-field id="password" type="password" placeholder="" label="Password" />
-                    <x-input-field id="confirmpassword" type="password" placeholder="" label="Confirm Password" />
-                </div>
-
-                <button type="submit" class="w-full bg-[#FDC936] text-[#000] px-6 py-3 rounded-full hover:bg-[#e0b22f] transition duration-300">Sign Up</button>
+                <button type="submit" class="w-full bg-[#FDC936] text-[#000] px-6 py-3 rounded-full hover:bg-[#e0b22f] transition duration-300">Login</button>
             </form>
 
             <div class="mt-10">
