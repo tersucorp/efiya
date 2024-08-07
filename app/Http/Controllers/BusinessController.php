@@ -4,14 +4,21 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\BusinessRegistrationRequest;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
 use App\Models\Business;
+use App\Services\BusinessService;
 
 class BusinessController extends Controller
 {
+    protected $businessService;
+
+    public function __construct(BusinessService $businessService)
+    {
+        $this->businessService = $businessService;
+    }
+
     public function index()
     {
-        $businesses = Business::latest()->paginate(10);
+        $businesses = $this->businessService->getAllPaginated();
         return view('businesses.index', ['businesses' => $businesses]);
     }
 
@@ -22,18 +29,7 @@ class BusinessController extends Controller
 
     public function store(BusinessRegistrationRequest $request): RedirectResponse
     {
-        $validatedData = $request->validated();
-
-
-        // Filter out null values
-        $filteredData = array_filter($validatedData, function ($value) {
-            return !is_null($value);
-        });
-
-        $filteredData['user_id'] = 1;
-
-        Business::create($filteredData);
-
+        $this->businessService->create($request->validated());
         return redirect('/businesses');
     }
 
@@ -49,18 +45,13 @@ class BusinessController extends Controller
 
     public function update(BusinessRegistrationRequest $request, Business $business): RedirectResponse
     {
-        $validatedData = $request->validated();
-
-        // $filteredData = $request->except(['_token', '_method']);
-
-        $business->update($validatedData);
-
+        $this->businessService->update($business, $request->validated());
         return redirect('/users/dashboard/businesses');
     }
 
     public function destroy(Business $business)
     {
-        $business->delete();
+        $this->businessService->delete($business);
         return redirect('/users/dashboard/businesses');
     }
 }
