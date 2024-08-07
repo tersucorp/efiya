@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Models\Business;
 use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Support\Facades\Auth;
 
 class BusinessService
 {
@@ -18,7 +19,7 @@ class BusinessService
             return !is_null($value);
         });
 
-        $filteredData['user_id'] = 1; // You might want to handle this differently
+        $filteredData['user_id'] = Auth::id();
 
         return Business::create($filteredData);
     }
